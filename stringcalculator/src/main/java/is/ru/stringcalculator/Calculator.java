@@ -9,8 +9,7 @@ public class Calculator {
 		}
 		else if(text.contains(",") && text.contains("\n"))
 		{
-			String[] numbers = text.split(",|\\n");
-			return sum(numbers);
+			return sum(splitByNewLineAndComma(text));
 		}
                 else if(text.contains(","))
                 {
@@ -46,5 +45,10 @@ public class Calculator {
 	private static String[] splitByNewLine(String numbers)
 	{
 		return numbers.split("\n");
+	}
+
+	private static String[] splitByNewLineAndComma(String numbers)
+	{
+		return numbers.split(",|\\n");
 	}
 }
