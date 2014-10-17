@@ -13,7 +13,8 @@ public class Calculator {
 		}
 		else if(text.contains("\n"))
 		{
-			return 3;
+			String [] numbers = text.split("\n");
+			return sum(numbers);
 		}
 		else
 		{
