@@ -9,7 +9,8 @@ public class Calculator {
 		}
 		else if(text.contains(",") && text.contains("\n"))
 		{
-			return 6;
+			String[] numbers = text.split(",|\\n");
+			return sum(numbers);
 		}
                 else if(text.contains(","))
                 {
