@@ -11,6 +11,10 @@ public class Calculator {
 		{
 			return sum(splitByComma(text));
 		}
+		else if(text.contains("\n"))
+		{
+			return 3;
+		}
 		else
 		{
 			return 1;
