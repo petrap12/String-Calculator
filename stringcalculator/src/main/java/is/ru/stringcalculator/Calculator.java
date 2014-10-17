@@ -6,6 +6,10 @@ public class Calculator {
 		{		
 			return 0;
 		}
+		else if(text.contains(","))
+		{
+			return 3;
+		}
 		else
 		{
 			return 1;
