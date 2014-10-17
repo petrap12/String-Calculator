@@ -7,19 +7,11 @@ public class Calculator {
 		{		
 			return 0;
 		}
-		else if(text.contains(",") && text.contains("\n"))
+		else if(text.contains(",") || text.contains("\n"))
 		{
 			return sum(splitByNewLineAndComma(text));
 		}
-                else if(text.contains(","))
-                {
-			return sum(splitByComma(text));
-                }
-		else if(text.contains("\n"))
-		{
-			return sum(splitByNewLine(text));
-		}
-		else
+                else
 		{
 			return 1;
 		}
@@ -35,16 +27,6 @@ public class Calculator {
 		}
 	
 		return totalSum;
-	}
-
-	private static String[] splitByComma(String numbers)
-	{
-		return numbers.split(",");
-	}
-
-	private static String[] splitByNewLine(String numbers)
-	{
-		return numbers.split("\n");
 	}
 
 	private static String[] splitByNewLineAndComma(String numbers)
