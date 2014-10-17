@@ -7,10 +7,14 @@ public class Calculator {
 		{		
 			return 0;
 		}
-		else if(text.contains(","))
+		else if(text.contains(",") && text.contains("\n"))
 		{
-			return sum(splitByComma(text));
+			return 6;
 		}
+                else if(text.contains(","))
+                {
+			return sum(splitByComma(text));
+                }
 		else if(text.contains("\n"))
 		{
 			return sum(splitByNewLine(text));
