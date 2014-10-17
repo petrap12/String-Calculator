@@ -9,8 +9,7 @@ public class Calculator {
 		}
 		else if(text.contains(","))
 		{
-			String [] numbers = text.split(",");
-			return sum(numbers);
+			return sum(splitByComma(text));
 		}
 		else
 		{
@@ -28,5 +27,10 @@ public class Calculator {
 		}
 	
 		return totalSum;
+	}
+
+	private static String[] splitByComma(String numbers)
+	{
+		return numbers.split(",");
 	}
 }
