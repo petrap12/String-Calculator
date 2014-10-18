@@ -62,4 +62,10 @@ public class CalculatorTest {
         {
                 assertEquals(3, Calculator.add("//;\n1;2"));
         }
+
+	@Test
+        public void testTwoNumbersDelimiterTwo()
+        {
+                assertEquals(3, Calculator.add("//=\n1=2"));
+        }
 }
