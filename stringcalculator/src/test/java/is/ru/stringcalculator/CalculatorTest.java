@@ -74,4 +74,10 @@ public class CalculatorTest {
         {
                 assertEquals(6, Calculator.add("//=\n1=2=3"));
         }
+
+	@Test
+        public void testTwoNumbersWithNegative()
+        {
+                assertEquals(0, Calculator.add("-1,2"));
+        }
 }

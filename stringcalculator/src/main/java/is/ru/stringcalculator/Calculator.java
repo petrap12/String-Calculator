@@ -9,13 +9,21 @@ public class Calculator {
 		}
 		else if(text.contains("//"))
 		{
-			String delimiter = text.substring(2,3);
-			String newText = text.substring(4);
-			return sum(splitByAnyDelimiter(newText, delimiter));
+			if(text.contains("-"))
+				return 0;
+			else
+			{
+				String delimiter = text.substring(2,3);
+				String newText = text.substring(4);
+				return sum(splitByAnyDelimiter(newText, delimiter));
+			}
 		}
 		else if(text.contains(",") || text.contains("\n"))
 		{
-			return sum(splitByNewLineAndComma(text));
+			if(text.contains("-"))
+				return 0;
+			else
+				return sum(splitByNewLineAndComma(text));
 		}
                 else
 		{
