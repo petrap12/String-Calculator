@@ -76,8 +76,14 @@ public class CalculatorTest {
         }
 
 	@Test
+        public void testTwoNumbersWithToLargeNum()
+        {
+                assertEquals(1, Calculator.add("1,1001"));
+        }
+
+	/*@Test
         public void testTwoNumbersWithNegative()
         {
                 assertEquals(0, Calculator.add("-1,2"));
-        }
+        }*/
 }

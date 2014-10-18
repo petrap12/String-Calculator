@@ -9,21 +9,19 @@ public class Calculator {
 		}
 		else if(text.contains("//"))
 		{
-			if(text.contains("-"))
-				return 0;
-			else
-			{
-				String delimiter = text.substring(2,3);
-				String newText = text.substring(4);
-				return sum(splitByAnyDelimiter(newText, delimiter));
-			}
+			/*if(text.contains("-"))
+				throw new NegativeNumbersException();*/
+
+			String delimiter = text.substring(2,3);
+			String newText = text.substring(4);
+			return sum(splitByAnyDelimiter(newText, delimiter));
 		}
 		else if(text.contains(",") || text.contains("\n"))
 		{
-			if(text.contains("-"))
-				return 0;
-			else
-				return sum(splitByNewLineAndComma(text));
+			/*if(text.contains("-"))
+				throw new NegativeNumbersException();
+			else*/
+			return sum(splitByNewLineAndComma(text));
 		}
                 else
 		{
@@ -37,7 +35,8 @@ public class Calculator {
 						
 		for (int i = 0; i < numbers.length; i++)
 		{
-			totalSum += Integer.parseInt(numbers[i]);
+			if ((Integer.parseInt(numbers[i])) < 1000)
+				totalSum += Integer.parseInt(numbers[i]);
 		}
 	
 		return totalSum;
@@ -52,4 +51,14 @@ public class Calculator {
 	{
 		return numbers.split(delimiter);
 	}
+
 }
+	
+/*public class NumberExceptions extends Exception
+{
+	public void NegativeNumbersException()
+        {
+                return 0;
+        }
+
+}*/
