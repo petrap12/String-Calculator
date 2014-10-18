@@ -12,7 +12,7 @@ public class Calculator {
 			/*if(text.contains("-"))
 				throw new NegativeNumbersException();*/
 
-			String delimiter = text.substring(2,3);
+			String delimiter = "[" + text.substring(2,3) + "]";
 			String newText = text.substring(4);
 			return sum(splitByAnyDelimiter(newText, delimiter));
 		}

@@ -81,6 +81,12 @@ public class CalculatorTest {
                 assertEquals(1, Calculator.add("1,1001"));
         }
 
+	@Test
+        public void testThreeNumbersWithToLargeNum()
+        {
+                assertEquals(7, Calculator.add("//?\n2?5?2002"));
+        }
+
 	/*@Test
         public void testTwoNumbersWithNegative()
         {
