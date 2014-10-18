@@ -9,7 +9,10 @@ public class Calculator {
 		}
 		else if(text.contains("//"))
 		{
-			return 3;
+			String delimiter = text.substring(2,3);
+			String newText = text.substring(4);
+			String[] numbers = newText.split(delimiter);
+			return sum(numbers);
 		}
 		else if(text.contains(",") || text.contains("\n"))
 		{
