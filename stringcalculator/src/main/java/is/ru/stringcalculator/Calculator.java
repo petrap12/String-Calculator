@@ -11,8 +11,7 @@ public class Calculator {
 		{
 			String delimiter = text.substring(2,3);
 			String newText = text.substring(4);
-			String[] numbers = newText.split(delimiter);
-			return sum(numbers);
+			return sum(splitByAnyDelimiter(newText, delimiter));
 		}
 		else if(text.contains(",") || text.contains("\n"))
 		{
@@ -39,5 +38,10 @@ public class Calculator {
 	private static String[] splitByNewLineAndComma(String numbers)
 	{
 		return numbers.split(",|\\n");
+	}
+
+	private static String[] splitByAnyDelimiter(String numbers, String delimiter)
+	{
+		return numbers.split(delimiter);
 	}
 }
